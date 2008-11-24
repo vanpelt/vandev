@@ -1,0 +1,14 @@
+---
+layout: post
+title: Croppr is born... perhaps pre-mature
+---
+
+So, I finally got around to testing TextMate's new blogging bundle.  It's dead simple...  Anywho, I figured I would use it to give a sneak peek of my newest invention _Croppr_, which I will be revealing in it's full glory tomorrow night at [SDruby](http://sdruby.com).
+
+All right, so Croppr was born out of a desire to make a better way to crop images online.  Specifically the need came from my buddy [Tom Werner's](http://www.cube6media.com) pet project, [Gravatar](http://gravatar.com).  The inspiration came from iChat's avatar cropper:
+
+![iChat Cropper](http://vandev.com/assets/2007/2/1/iChat_cropper.png)
+
+After days of arduous JavaScript hacking with the help of [Prototype](http://prototype.conio.net) and eventually Prototype Lite with [moo.fx](http://moofx.mad4milk.net/) I had a lightweight browser equivalent.  Have a [peek](http://svn.vandev.com/croppr) and play around.
+
+What good is a lightweight JavaScript cropper without a lightweight back end to actually do the cropping?  Enter [camping](http://code.whytheluckystiff.net/camping).  In just 225 lines of [sexy Ruby code](http://svn.vandev.com/croppr) I have a fully functional image cropping machine.  I hope to have a running demo available in the near future.  As far as licensing goes, I'm still working on it so hold your shorts.  Until than, come to the SDruby meetup (start driving now if you have to) and see all the awesomeness that is Croppr!

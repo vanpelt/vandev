@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+  <script src="/js/mootools2.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/code_highlighter.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/javascript.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/ruby.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/html.js" type="text/javascript" charset="utf-8"></script>
+  <!-- FEED -->
+</head>
+<body>
+
+  <div id="container">
+    <div id="header">
+	<h1><a href="/"><img alt="VanDev" src="/images/vandev.gif" /></a></h1>
+	<h2><a href="#flickr" class="smooth"><img alt="It's not what you think" src="/images/tagline.gif" /></a></h2>
+      <ul>
+        <li><a href="/funny.html">Funny</a></li>
+        <li><a href="/creative.html">Creative</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+      </ul>
+    </div>
+	<div id="page">
+    <div id="content">
+      {{ content }}
+    </div>
+	<div id="sidebar">
+	 <div id="search" class="search">
+      <h2>Go for it:</h2>
+      <form method="get" id="sform" action="/archive.html">
+	<p><input type="text" id="q" value="" name="q" size="15" /></p>
+      </form>
+     </div>
+<br/><br/>
+	 <div class="sidebar-node">
+	  <h3>About Me</h3>
+                 <img alt="Me - Chris Van Pelt" src="/images/face.jpg" />
+		<p>I'm curious as a cat, a 26 year old cat that loves to travel and enjoys the piss out of web development.</p><br/>
+	 </div>
+         {% if related_posts %}
+         <div class="sidebar-node" id="sidenav">
+           <h3>Related Posts</h3>
+           <ul class="posts">
+             {% for post in related_posts limit:4 %}
+               <li><a href="{{ post.url }}">{{ post.title }}</a><br/><span>{{ post.date | date_to_string }}</span></li>
+             {% endfor %}
+           </ul>
+         </div>
+<script type="text/javascript" charset="utf-8">
+/* <![CDATA[ */
+  var slideEffect = new Fx.Tween('sidenav', {wait:false, duration:600, transition:Fx.Transitions.Circ.easeOut});
+  window.addEvent('load', function() {
+    var top = $('sidenav').getPosition().y - 10;
+    window.addEvent('scroll', function(){
+      slideEffect.start.delay(500, slideEffect, [ 'margin-top', Math.max(0, document.documentElement.scrollTop - top)]);
+    });
+  });
+/* ]]> */
+</script>
+         {% endif %}
+    </div>
+   </div>
+   <div id="footer">
+    <div id="extras">
+      <div id="flickr" class="plugin">
+        <a name="flickr"></a>
+        <h3 id="flick">What the Flick</h3>
+        <script type="text/javascript" charset="utf-8">
+        /* <![CDATA[ */
+          function jsonFlickrFeed(json) {
+            for(var i = 0; i < 6; i++) {
+              var item = json['items'].getRandom()
+              new Element('div', {'class':'square'}).grab(
+                new Element('a', {href:'#'}).grab(
+                  new Element('img', {
+                    src:item['media']['m'].replace(/_m\./,'_s.'), 
+                    alt:item['title']
+                  })
+                )
+              ).inject('flick', 'after')
+            }
+          }
+        /* ]]> */
+        </script>
+        <script src="http://api.flickr.com/services/feeds/photos_public.gne?id=61675320@N00&format=json" type="text/javascript" charset="utf-8"></script>
+      </div>
+    </div>
+    <ul id="infobar">
+    	<li><a href="http://jigsaw.w3.org/css-validator">Valid</a> CSS |</li>
+    	<li><a href="http://validator.w3.org/check/referer">Valid</a> XHTML |</li>
+    	<li>Designed by <a href="/">me</a> |</li>
+    	<li>Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> |</li>
+    	<li>Sexified by <a href="http://mootools.net">Mootools</a></li>
+    </ul>
+   </div>
+  </div>
+</body>
+<script type="text/javascript" src="http://www.tapefailure.com/track/9d9a0f15c2a782de18d2934df4f621c9/1/"></script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+//over = new Overcast({min: 1, fuzz: 4, overlay: "/images/gloss.png"});
+$$('#header ul li a').each(function(el) {
+  var bounce = new Fx.Tween(el, {duration:700, transition: Fx.Transitions.Elastic.easeOut});
+  var colors = new Fx.Morph(el, {wait:false});
+  
+  el.addEvent('mouseenter', function(){
+	el.setStyle('background-color', '#d5e88f');
+	bounce.start('top', 15,0);
+  	colors.start({
+		color: '#35342e'
+  	});
+  });
+  el.addEvent('mouseleave', function(){
+  	colors.start({
+		'background-color': '#35342e',
+		color: '#d5e88f'
+  	});
+  });
+});
+$$('div#flickr img').each(function(e){
+  var fade = new Fx.Tween(e, {wait:false});
+  fade.set( 'opacity', .5);
+  e.addEvent('mouseover', function(){
+	fade.start( 'opacity', 1);
+  });
+  e.addEvent('mouseout', function(){
+  	fade.start( 'opacity', .5);
+  });
+});
+new SmoothScroll({duration:700, links: '.smooth', transition:Fx.Transitions.Circ.easeOut});
+_uacct = "UA-92089-3";
+urchinTracker();
+</script>
+</html>

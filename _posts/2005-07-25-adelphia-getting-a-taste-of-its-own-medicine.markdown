@@ -1,0 +1,8 @@
+---
+layout: post
+title: Adelphia, getting a taste of its own medicine
+---
+
+Recently I moved to a new apartment.  We decided to cancel service and get service with a new provider.  Adelphia SUCKS.  They questioned me for "illegal" server activity.  I made an FTP server to back up one of my servers back home, and the freaked out because they saw activity on port 21 and 22.  Anyway, it turns out that Adelphia is the only cable company that offers service in my area.  A month ago I made an appointment with Adelphia to "set up" my Internet.  It just so happened that during the 2 hour window they gave me to be home, I had other arrangements.  I asked them to come towards the end of the window, instead they came at the beginning and all hope was lost.  The next available slot was a week from the following Saturday from 1-5.  I wasn't going to commit a four hour time slot on a Saturday afternoon, so I said 'F' it and bought an external WIFI antenna for my laptop.  That's when the fun started.
+
+Things were going swimmingly until my neighbor caught on.  One day the connection was WEP'ed.  Fortunately I was able to hop on to another neighbors.  It didn't last long until they WAP'ed theirs (I have no idea how they knew I was on, probably bandwidth).  Anyway, that was my last option.  I ground my teeth, and called Adelphia to set up an appointment.  That was when the unbelievable happened.  I came home from work today, desperate for Internet, and I decided to try and plug my cable modem into the wall.  I had thought about it before, but wrote off the possibility of the modem just hopping onto the network.  Well, I've waisted the past month without Internet, when I could have had it for free.  I'm cruising now, will Adelphia find out?

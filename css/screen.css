@@ -1,0 +1,433 @@
+@media print {
+	#sidebar { display:none; }
+	#content { float: none; width:90%; }
+	#content pre { color: #000; background: #eee; }
+	#content form.comments { display:none; }
+}
+
+body {
+  font: normal 12px verdana, "lucida grande", arial, helvetica, sans-serif;
+	color:#eee;
+  background:#AAA;
+}
+
+input,
+textarea { font: normal 12px "bitstream vera sans", verdana, sans-serif; }
+
+abbr { border: none; }
+cite { font-style: normal; }
+a img { border: none; padding: 0; margin: 0; }
+
+a:link, a:visited { color: #adc654; text-decoration: none; }
+a:hover, a:active {	color: #d5e88f;text-decoration: underline; }
+
+#github-badge {
+  background:none !important;
+}
+#github-badge .repos .public {
+  border: none !important;
+  background: none !important;
+}
+#github-badge a {
+  background: none !important;
+}
+#github-badge a:hover {
+  color:#FFF !important;
+  text-decoration: none !important;
+}
+#github-badge a:visited {
+  color:#BBD17E !important;
+}
+/* Layout */
+
+/**
+ * Controls the main layout (width, height, margin, padding)
+ *
+ * #container
+ *   #header
+ *   #page
+ *     #content
+ *     #sidebar
+ *   #footer
+ */
+body {
+	text-align: center;
+	margin: 0; padding: 0; 
+}
+
+#container {
+	width: 100%;
+	min-width:780px;
+	text-align: left; 
+}
+
+#page {
+	padding:0;
+}
+
+#content {
+ 	padding: 10px;
+	padding-right:260px;
+	min-height:400px;
+}
+
+#sidebar {
+	position:absolute;
+	top:0;
+	right:0;
+	width: 230px;
+	margin: 0; padding: 0 10px;
+}
+
+/* Header */
+#header {position:relative;height:100px;background: #35342e;}
+
+#header ul {
+	position:absolute;
+	right:250px;
+	bottom:5px;
+	font-size:135%;
+	margin:0; padding: 0;
+	list-style-type: none;
+}
+
+#header li {
+	margin:0;padding:0;
+	display: inline; 
+}
+
+#header li a:link,
+#header li a:visited { position:relative;padding:5px 12px 12px;color:#d5e88f;font-weight:bold;text-decoration: none; }
+#header li a:active { background:#d5e88f;color:#35342e; text-decoration: none; }
+
+#header h1 {
+	float:left;
+	margin: 0; padding: 0;
+}
+
+#header h2 {
+	float:left;
+	margin: 43px 0 0; padding: 0;
+}
+
+label { display:block; margin-top:5px }      
+
+h3 span {
+  font-size:80%;
+}
+
+/* Page */
+#page {
+	position:relative;
+	background: #4e4b44 url(/images/sidebar.gif) repeat-y right;
+}
+
+/* Content */
+
+#content {
+	border-top: 20px #d5e88f solid;
+	background: url(/images/topswirl.jpg) no-repeat;
+}
+
+#content h1 {
+	font-size: 24px;
+	margin: 0 0 0.3em;	
+}
+
+#content h2 {
+	color: #adc654;
+	font-size: 22px;
+	margin: 0 0 0.3em;	
+}
+
+#content h5 {
+	font-size: 14px;
+	margin: 0 0 0.3em;	
+}
+
+#content p {
+	line-height: 15px; 
+	margin: 0 .5em 1.2em;
+}
+
+#content ul,
+#content ol {	margin: 1em; padding:0; }
+
+#content ul { list-style-type: square; }
+
+#content li {
+	line-height: 15px; 
+	margin: 0 0 0 1em; padding: 0;
+}
+
+#content blockquote {
+	color: #555;
+	border-left: 5px solid #ccc; 
+	margin: 1.3em 1em; padding: 0 1em;
+}
+
+/**
+ * Article Entries
+ *
+ * Class names based on the hAtom microformat specification[1]
+ * http://microformats.org/wiki/hatom]
+ */
+#content .atomentry { max-width:900px; margin: 0 0 3em 0; }
+
+#content .atomentry .title {
+	font-size: 24px; line-height: 94%;
+	letter-spacing: -.1px; 
+	margin: 0;
+}
+
+#content .atomentry .title .comment_count { display: none; }
+
+#content .atomentry .author {
+	color: #d5e88f;
+	font: normal 12px/10px "lucidamac bold", "lucida grande", arial, verdana, sans-serif;
+	margin: 1em;
+}
+
+#content .atomentry .author abbr { /* posted date */
+	font-weight: bold;
+	color: #bbd17e;
+}
+
+#content .atomentry .content {}
+
+#content .atomentry .meta { 
+	font-size: 10px;
+	margin: 0; padding: 5px;
+	list-style-type: none;
+	text-align:center;
+}
+
+#content .atomentry .meta a:link,
+#content .atomentry .meta a:visited { text-decoration:underline; }
+
+/**
+ * Comments and Trackbacks
+ */
+
+#content ol.commentlist {
+	list-style-type: none;
+	margin: 0; padding: 0;
+}
+
+#content ol.commentlist li {
+	float:right;
+	clear:both;
+	max-width:700px;
+        background: #4e4b44;
+	margin: 0 -10px 0 0; padding: 1em; padding-bottom:0;
+}
+#content ol.commentlist li.alt {
+	background: #636a4c;
+}
+
+#content ol.commentlist .commentmetadata {
+        display:block;
+	margin-bottom:10px
+}
+
+#content ol.commentlist img.gravatar { 
+	margin: 0 0 0.5em 0.5em;
+	float: right; 
+}
+
+#content ol.commentlist li cite {
+	color: #adc654;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+form#comment-form {
+  background:#35342e;
+  margin: 10px -10px -10px;
+  padding: 1em 0.5em;
+}
+
+form#comment-form label {
+   display:block;
+}
+
+form #comment_author_url {
+  width:167px;
+}
+
+/* Side bar */
+
+#sidebar {
+	background:#636a4c;
+	font-size: 12px;
+}
+
+#sidebar a:link, #sidebar a:visited { color: #bbd17e; }
+#sidebar a:hover, #sidebar a:active { color: #eee; }
+
+#sidebar p {
+	color: #bbd17e;
+	font-size:11px;
+	padding:0 .5em;
+}
+
+#sidebar h2 {
+	text-align:center;
+	font-size: 11px;
+	font-weight:normal;
+	margin: 0 0 -8px;	
+}
+
+#sidebar h3 {
+	color: #adc654;
+	font: 15px verdana, arial, helvetica, sans-serif;
+	margin: 0 0 0.5em;
+}
+
+#sidebar ul {
+	list-style-type: none; 
+	margin: 0 0 2em 1em; padding: 0;
+}
+
+#sidebar li { margin: 0; padding: 1px 0; }
+
+#sidebar em { font-style: normal; }
+
+#sidebar .search { margin-top:-2.4em; }
+
+#sidebar .search p { text-align:center; }
+
+#sidebar .search p input {text-align:center;background:#eee;color:#35342e;height:1.25em;width:220px;font-size: 1.2em;font-weight:bold}
+
+/* footer */
+
+#footer {
+	background: #35342e url(/images/swirl.jpg) no-repeat;
+}
+
+#footer hr { display: none; }
+
+#footer div#extras {
+	position:relative;
+	height: 230px;
+	background: url(/images/sidebar.gif) repeat-y right; 
+}
+
+#footer #extras h3 {
+	width:85%;
+	font-weight:normal;
+	font-size:18px;
+	color:#adc654;
+	padding: 0 0 .2em .5em;
+	margin: 0 0 0.3em;
+	border-bottom: 5px solid #d5e88f;
+}
+
+
+#footer div#extras div.plugin {
+	padding:10px;
+}
+
+#footer div#extras div#flickr {
+	position:absolute;
+	left:15px;
+	width:243px;
+}
+
+#footer div#extras div#magnolia {
+	position:absolute;
+	left:283px;
+	width:212px;
+}
+
+#footer div#extras div#folksonomy {
+	position:absolute;
+	right:5px;
+	width:237px;
+}
+
+#footer div#extras div#folksonomy div {
+	text-align:center;
+}
+
+#footer div.square {
+	float:left;
+	margin:2px;
+	margin-right:4px;
+}
+
+#footer div.square img {
+	height: 75px;
+}
+
+#footer #infobar {
+	clear:both;
+	font-size:90%;
+	color:#35342e;
+	width: 100%;
+	background:#d5e88f;
+	margin: 0; padding:.5em 0;
+	list-style-type: none; 
+	text-align: center;
+}
+
+#footer #infobar  a:link,
+#footer #infobar  a:visited {	color:#35342e;text-decoration:underline; }
+#footer #infobar  a:hover,
+#footer #infobar  a:active { color: #636a4c; }
+
+
+#footer li {
+	margin: 0; padding:0;
+	display: inline; 
+}
+
+/* == Code Highlighting == */
+#content pre, 
+#content code { color: #D5e88f; font: normal 12px "bitstream vera sans mono", monaco "lucida console", "courier new", courier, serif; }
+
+#content pre {
+	color: #eee; background: #161616; 
+	margin: 1em 0; padding: 10px;
+	overflow: auto; 
+}
+
+
+/** RUBY / JAVASCRIPT **/
+#content pre code {
+       color: #687927;
+}
+
+code span.comment {
+	color: #636a4c;
+}
+
+code span.string {
+	color: #72a0dc;
+}
+
+code span.keywords {
+	color: #adc654;
+}
+
+code span.erb {
+	background: #323334;
+}
+
+code span.symbol, #content code span.brackets {
+      color: #93392f;
+}
+
+/** HTML **/
+code.html span.attribute {
+	color: #adc654;
+}
+
+code.html span.string {
+         color: #93392f;
+}
+
+code.html span.doctype {
+	color: #636a4c;
+}
