@@ -13,7 +13,7 @@ X11:
 
 Freetype2:
 
-{% highlight %}
+{% highlight bash %}
 curl -O http://umn.dl.sourceforge.net/sourceforge/freetype/freetype-2.2.1.tar.gz
 tar zxvf freetype-2.2.1.tar.gz
 cd freetype-2.2.1
@@ -23,7 +23,7 @@ cd ..
 
 Jpeg:
 
-{% highlight %}
+{% highlight bash %}
 curl -O ftp://ftp.uu.net/graphics/jpeg/jpegsrc.v6b.tar.gz
 tar zxvf jpegsrc.v6b.tar.gz
 cd jpeg-6b
@@ -35,7 +35,7 @@ cd ..
 
 PNG:
 
-{% highlight %}
+{% highlight bash %}
 curl -O http://umn.dl.sourceforge.net/sourceforge/libpng/libpng-1.2.10-no-config.tar.gz
 tar zxvf libpng-1.2.10-no-config.tar.gz
 cd libpng-1.2.10
@@ -46,7 +46,7 @@ cd ..
 
 ImageMagick:
 
-{% highlight %}
+{% highlight bash %}
 curl -O http://umn.dl.sourceforge.net/sourceforge/imagemagick/ImageMagick-6.2.8-0.tar.gz
 tar zxvf ImageMagick-6.2.8-0.tar.gz
 cd ImageMagick-6.2.8
@@ -56,7 +56,7 @@ cd ..
 
 RMagick (finally and thankfully):
 
-{% highlight %}
+{% highlight bash %}
 sudo gem install rmagick
 {% endhighlight %}
 
